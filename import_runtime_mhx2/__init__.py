@@ -24,7 +24,7 @@ bl_info = {
     'name': 'Import-Runtime: MakeHuman Exchange 2 (.mhx2)',
     'author': 'Thomas Larsson',
     'version': (0,32),
-    'blender': (2, 80, 0),
+    'blender': (4, 0, 0),
     'location': "File > Import-Export",
     'description': 'Import files in the new MakeHuman eXchange format (.mhx2)',
     'warning': '',
@@ -141,8 +141,8 @@ class MHX_PT_Setup(bpy.types.Panel):
         layout.separator()
         box = layout.box()
         box.label(text="Visibility")
-        box.operator("mhx2.add_hide_drivers")
-        box.operator("mhx2.remove_hide_drivers")
+        layout.operator("mhx2.add_hide_drivers")
+        layout.operator("mhx2.remove_hide_drivers")
 
         layout.separator()
         box = layout.box()
